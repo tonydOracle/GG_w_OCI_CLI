@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "license_model": "LICENSE_INCLUDED",
+  "environment_type": "DEVELOPMENT_OR_TESTING",
+  "ocpu_count": 1,
+  "source_version": "REPLACE_WITH_REGIONAL_SQLSERVER_BUILD",
+  "target_version": "REPLACE_WITH_REGIONAL_POSTGRESQL_BUILD",
+  "source_admin_user": "sa",
+  "target_admin_user": "admin",
+  "console_user": "oggadmin",
+  "accounts_mode": "create",
+  "nsg_ids": [
+    "ocid1.networksecuritygroup.oc1..REPLACE_ME"
+  ],
+  "source_admin_secret_id": "ocid1.vaultsecret.oc1..REPLACE_ME",
+  "target_admin_secret_id": "ocid1.vaultsecret.oc1..REPLACE_ME",
+  "capture_secret_id": "ocid1.vaultsecret.oc1..REPLACE_ME",
+  "apply_secret_id": "ocid1.vaultsecret.oc1..REPLACE_ME",
+  "cleanup_days": 3,
+  "configure_unlimited_lob": false,
+  "deployment_ca_file": ""
+}

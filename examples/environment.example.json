@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "environment": "demo",
+  "oci": {
+    "profile": "DEFAULT",
+    "auth": "api_key",
+    "region": "us-ashburn-1",
+    "compartment_id": "ocid1.compartment.oc1..REPLACE_ME",
+    "config_file": "~/.oci/config"
+  },
+  "source": {
+    "host": "sqlserver.example.invalid",
+    "port": 1433,
+    "database": "AppDb",
+    "inspection_user": "metadata_reader",
+    "capture_user": "ggcapture",
+    "location": "onprem",
+    "trust_server_certificate": false
+  },
+  "target": {
+    "db_system_id": "ocid1.postgresqldbsystem.oc1..REPLACE_ME",
+    "host": "postgresql.example.invalid",
+    "port": 5432,
+    "database": "AppDb",
+    "inspection_user": "admin",
+    "apply_user": "ggapply",
+    "ca_file": "destination-ca.pem"
+  },
+  "goldengate": {
+    "prefix": "DEMO",
+    "schema": "ggschema",
+    "source_alias": "DemoSource",
+    "target_alias": "DemoTarget",
+    "network_alias": "DemoReceiver",
+    "subnet_id": "",
+    "vault_id": "",
+    "key_id": "",
+    "source_deployment_id": "",
+    "target_deployment_id": ""
+  },
+  "scope": {
+    "mode": "all",
+    "include_tables": [],
+    "exclude_tables": [],
+    "exclude_schemas": [
+      "ggschema",
+      "cdc",
+      "sys",
+      "INFORMATION_SCHEMA"
+    ]
+  }
+}

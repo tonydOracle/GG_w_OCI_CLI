@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oci-gg-setup"
+version = "0.3.0"
+description = "Configuration-driven SQL Server to OCI PostgreSQL replication planning and experimental staged execution"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+ggsetup = "ggsetup.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["ggsetup*"]
